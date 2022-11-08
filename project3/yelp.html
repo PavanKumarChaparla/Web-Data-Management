@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--Pavan Kumar Chaparla-->
+
+<html lang="en">
+  <head>
+    <h1 style="text-align: center;">Web Mashup: Display Best Restaurants on a Map</h1>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="yelp.js"></script>
+	<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqxkZOf-iUMuInEsJo_K-w2eYv45z1qrg&callback=initMap&libraries=geometry" type="text/javascript"></script>
+  </head>
+  <body onload="initialize();">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <form class="form-inline" style="margin-left:40%;">
+       <label>Search Terms: <input  class="form-control" type="text" id="search" aria-label="Search"/></label>
+       <input type="button" onclick="sendRequest();"  class="btn btn-primary" value="Find"/>
+    </form>
+	<div id="googlemap" style="width:500px;height:500px;margin:auto;margin-bottom:3%;">
+  </div>
+	<div id="output">&nbsp;</div>
+  </body>
+</html>

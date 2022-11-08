@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--PAVAN KUMAR CHAPARLA-->
+<html lang="en">
+
+<head>
+	<title>A Music Web Application</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="music.js"></script>
+</head>
+
+<body onload="initialize();">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<div >
+		<h2 style="text-align: center;">Artist Name:</h2>
+		<div >
+			<form class="form-inline" style="margin-left:40%">
+				<input class="form-control"  id="artist-name" type="search" placeholder="Enter Here"
+					aria-label="Search">
+				<button class="btn btn-primary" type="button" onclick="sendRequest();">DisplayInfo</button>
+			</form>
+		</div>
+	</div>
+	<div id="enter-text" >
+		<div class="row">
+			<div style="margin-left:40%; margin-top:1%" >
+				<p>Enter the Artist Name and click on Display Info</p>
+			</div>
+		</div>
+	</div>
+	<div  style="display: none" id="diplay-results">
+		<div class="container" id="aboutArtist">
+			<h2 class="text-center"> 
+				<div id="artist">
+				</div>
+			</h2>
+			<div>
+				<div>
+					<img id="artistPicture" class="rounded text-center" src="" width="350" height="400" style="display: block;
+					margin-left: auto;
+					margin-right: auto;">
+				</div>
+				<div style="margin-top:1%;">
+					<p>Click On the Artist Name above for the Artist page in lastFM</p>
+					<h2 id="artistLink">ABOUT</h2>
+					<p id="artistBio"></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<h2>Top Albums</h2>
+			<div class="row" id="artistAlbums">
+			</div>
+		</div>
+		<div class="container">
+			<h3>Similar Artists</h3>
+			<p  class="row similar-artists">
+			</p>
+		</div>
+	</div>
+</body>
+</html>
